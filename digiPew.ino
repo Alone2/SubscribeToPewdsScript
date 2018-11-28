@@ -2,10 +2,11 @@
 
 void setup() {
   DigiKeyboard.sendKeyStroke(0);
-  //use edge
+  //use edge (5 second(5000 Millisecond)delay to wait for the browser to load)
   startProgram("edge", 5000);
   //go to Pewds
-  schreibStart();
+  DigiKeyboard.sendKeyStroke(KEY_L, MOD_CONTROL_LEFT);
+  DigiKeyboard.delay(500);
   DigiKeyboard.println("youtube.com/pewdiepie");
   DigiKeyboard.delay(8000);
   //navigate to the subscribe button
@@ -31,9 +32,4 @@ void startProgram(String Program, int programDelay) {
   DigiKeyboard.delay(500);
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
   DigiKeyboard.delay(programDelay);
-}
-
-void schreibStart() {
-  DigiKeyboard.sendKeyStroke(KEY_L, MOD_CONTROL_LEFT);
-  DigiKeyboard.delay(500);
 }
